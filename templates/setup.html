@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>A Nime Downloader</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="{{url_for('static', filename='js/request.js')}}"></script>
+    <style type="text/css">
+      #Message {
+        color:#de0e0e;
+      }
+      button {
+        margin:0;
+        background:0;
+        color: blue;
+        border:0;
+      }
+      button:hover {
+        margin:0;
+        background:0;
+        color: red;
+        border:0;
+      }
+      body {
+        background: #e1f8e3;
+      }
+      #warning-js {
+        background: #fc8282;
+        border-color: #f65353;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>Identify Yourself</h3>
+    <div id="Message"></div>
+    <form action="/verify" method="post"id="token_verify">
+      <div id="warning-js"></div>
+      <input id="token_input" type="password" name="token" placeholder="Enter token"/>
+      <input type="submit" value="Submit"/>
+      <br><br>
+    </form>
+    
+    <form action="" method="post" id="hidden-js-token">
+      <input id='hidden-js-token-input' type="hidden" name="sent_value"/>
+    </form>
+    
+    <button type="button" id="token-js-create">Create token</button>
+    
+    
+    <button type="button" onclick="replace()">Why?</button>
+    
+  </body>
+</html>

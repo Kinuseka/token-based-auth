@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Token Profile</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="{{url_for('static', filename='js/token_gather.js')}}"></script>
+    <style>
+      #hidden-js{
+        display: none;
+        color: gray;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>Token</h3>
+    <p id="hidden-js">{{Token}}</p>
+    <button type="button" onclick="show()">Show Token</button>
+    <p>Your Unique token is generated, please copy it and save it somewhere secure</p>
+    <a href="/">Return to menu</a>
+   <!---<meta http-equiv="refresh" content="10; URL=/" />--->
+  </body>
+</html>
